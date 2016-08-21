@@ -1,0 +1,48 @@
+{
+ "name": "morphline-parser",
+ "order": 0,
+ "type": "Morphlines",
+ "configuration": {
+   "morphline": {
+     "id": "morphline1",
+     "importCommands": [
+       "org.kitesdk.**"
+     ],
+     "commands": [
+       {
+         "readJson": {}
+       },
+       {
+         "extractJsonPaths": {
+           "paths": {
+             "venue_name": "/venue/venue_name",
+             "venue_lon": "/venue/lon",
+             "venue_lat": "/venue/lat",
+             "venue_id" : "/venue/venue_id",
+             "visibility": "/visibility",
+             "response": "/response",
+             "guests": "/guests",
+             "member_id": "/member/member_id",
+             "member_photo": "/member/photo",
+             "member_name":"/member/member_name",
+             "rsvp_id": "/rsvp_id",
+             "mtime": "/mtime",
+             "event_name": "/event/event_name",
+             "event_id": "/event/event_id",
+             "event_time": "/event/event_time",
+             "event_url": "/event/event_url",
+             "group_city": "/group/group_city",
+             "group_country": "/group/group_country",
+             "group_id": "/group/group_id",
+             "group_name": "/group/group_name",
+             "group_lon": "/group/group_lon",
+             "group_urlname": "/group/group_urlname",
+             "group_state": "/group/group_state",
+             "group_lat": "/group/group_lat"
+           }
+         }
+       }
+     ]
+   }
+ }
+}

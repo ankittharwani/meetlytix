@@ -1,0 +1,34 @@
+{
+  "name": "morphline-parser",
+  "order": 0,
+  "type": "Morphlines",
+  "outputFields": [
+    "field1",
+    "field2",
+    "field3"
+  ],
+  "configuration": {
+    "morphline": {
+      "id": "morphline1",
+      "importCommands": [
+        "org.kitesdk.**"
+      ],
+      "commands": [
+        {
+          "readJson": {
+            "outputClass" : "java.util.Map"
+          }
+        },
+        {
+          "extractJsonPaths": {
+            "paths": {
+              "field1": "/venue/venue_name",
+              "field2": "/event/event_name",
+              "field3": "/guests"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
