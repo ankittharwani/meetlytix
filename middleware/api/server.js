@@ -4,8 +4,8 @@ var cassandra = require('cassandra-driver');
 
 var client = new cassandra.Client( { contactPoints : [ 'dse-01.meetlytix.com' ] }, { protocolOptions : { port: 9042 } } );
 client.connect(function(err, result) {
-    //assert.ifError(err);
-    console.log('Connected.');
+  //assert.ifError(err);
+  console.log('Connected.');
 });
 
 var app = express();
@@ -21,27 +21,27 @@ app.use(function(req, res, next) {
 });
 
 app.get('/metadata', function(req, res) {
-    //console.log(res);
-    res.send(client.hosts.slice(0).map(function (node) {
-        return { address : node.address, rack : node.rack, datacenter : node.datacenter }
-    }));
+  //console.log(res);
+  res.send(client.hosts.slice(0).map(function (node) {
+    return { address : node.address, rack : node.rack, datacenter : node.datacenter }
+  }));
 });
 
 
 app.get('/getRSVPCount/:date', function(req, res) {
-    //console.log(req.params.date);
-    //console.log("Parsing Date...");
-    var rangeDate = new Date(req.params.date);
-    //console.log(rangeDate);
-    client.execute(getRSVPCount, [rangeDate], function(err, result) {
-        if (err) {
-            res.status(404).send({ Error : 'Could not fetch RSVP counts' });
-            //console.log(err);
-        } else {
-            res.json(result);        }
+  //console.log(req.params.date);
+  //console.log("Parsing Date...");
+  var rangeDate = new Date(req.params.date);
+  //console.log(rangeDate);
+  client.execute(getRSVPCount, [rangeDate], function(err, result) {
+    if (err) {
+      res.status(404).send({ Error : 'Could not fetch RSVP counts' });
+      //console.log(err);
+    } else {
+      res.json(result);        }
     });
-});
+  });
 
-var server = app.listen(3000, function() {
+  var server = app.listen(3000, function() {
     console.log('Listening on port %d', server.address().port);
-});
+  });
