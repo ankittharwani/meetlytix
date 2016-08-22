@@ -1,0 +1,1 @@
+{  "name": "Meetlytix",  "version": "0.1.0",  "description": "Meetlytix - DSE RestAPIs Documentation",  "title": "Meetlytix - DSE RestAPIs",  "url": "https://api.meetlytix.com",  "sampleUrl": false,  "apidoc": "0.2.0",  "generator": {    "name": "apidoc",    "time": "2016-08-22T09:30:00.753Z",    "url": "http://apidocjs.com",    "version": "0.16.1"  }}
