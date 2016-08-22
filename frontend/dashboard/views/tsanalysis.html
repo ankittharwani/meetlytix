@@ -9,7 +9,7 @@
               <i class="stat-icon fa fa-long-arrow-up"></i>
             </div>
             <div class="databox-stat stat-left radius-bordered">
-              <div class="stat-text white">CPU USAGE</div>
+              <div class="stat-text white">Meetup RSVPs</div>
             </div>
             <div databox-flot-chart-realtime class="chart chart-lg" id="chart1">
             </div>
@@ -75,6 +75,10 @@
 
       </div>
 
+      <div class="col-lg-6"><div id="map" style="width: 500px; height: 335px; border: 1px solid #AAA;"></div></div>
+    </div>
+
+    <div class="row" ng-show="true">
 
     </div>
 
@@ -149,4 +153,58 @@ $.getScript('//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.min.js',fun
     });// end getScript (resize)
   });// end getScript (pie)
 });// end getScript
+</script>
+
+
+<script>
+$('head').append('<link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css">');
+$('head').append('<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css">');
+$('head').append('<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css">');
+
+
+$.getScript('//cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js',function(){
+  $.getScript('//cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js',function(){
+    $.getScript('lib/marker.js',function(){
+
+    var map = L.map( 'map', {
+      center: [10.0, 5.0],
+      minZoom: 2,
+      zoom: 2
+    });
+
+    L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      subdomains: ['a','b','c']
+    }).addTo( map );
+
+    var myIcon = L.icon({
+      iconUrl: 'assets/img/pin24.png',
+      iconRetinaUrl: 'assets/img/pin48.png',
+      iconSize: [29, 24],
+      iconAnchor: [9, 21],
+      popupAnchor: [0, -14]
+    });
+
+    var markerClusters = L.markerClusterGroup();
+
+    for ( var i = 0; i < markers.length; ++i )
+    {
+      var popup = markers[i].name +
+      '<br/>' + markers[i].city +
+      '<br/><b>IATA/FAA:</b> ' + markers[i].iata_faa +
+      '<br/><b>ICAO:</b> ' + markers[i].icao +
+      '<br/><b>Altitude:</b> ' + Math.round( markers[i].alt * 0.3048 ) + ' m' +
+      '<br/><b>Timezone:</b> ' + markers[i].tz;
+
+      var m = L.marker( [markers[i].lat, markers[i].lng], {icon: myIcon} )
+      .bindPopup( popup );
+
+      markerClusters.addLayer( m );
+    }
+
+    map.addLayer( markerClusters );
+    });
+  });
+});
+
 </script>
