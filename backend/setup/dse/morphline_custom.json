@@ -8,32 +8,32 @@
         "venue_name": "/venue/venue_name",
         "event_time": "/event/time",
         "guests": "/guests",
-        "group_topics": "/group/group_topics[]/topic_name[]"
+        "group_topics": "/group/group_topics[]"
       }
     }
   },
-        {
-        java {
-          imports : """
-            import java.util.*;
-            import com.fasterxml.jackson.databind.*;
-            import com.fasterxml.jackson.databind.node.*;
-          """
-          code: """
-            List similars = record.get("similars");
-            for (ArrayNode similar : similars) {
-                Iterator iterator = similar.elements();
-                while (iterator.hasNext()) {
-                    JsonNode pair = iterator.next();
-                    JsonNode jsonNode = pair.get(1);
-                    //we remove entries with similarity < 0.1
-                    if (jsonNode == null || jsonNode.asDouble() < 0.1) {
-                        iterator.remove();
-                    }
-                }
-            }
-            return child.process(record);
-          """
+  {
+    "java": {
+      "imports" : """
+      import java.util.*;
+      import com.fasterxml.jackson.databind.*;
+      import com.fasterxml.jackson.databind.node.*;
+      """,
+      "code": """
+      List similars = record.get('similars');
+      for (ArrayNode similar : similars) {
+        Iterator iterator = similar.elements();
+        while (iterator.hasNext()) {
+          JsonNode pair = iterator.next();
+          JsonNode jsonNode = pair.get(1);
+          //we remove entries with similarity < 0.1
+          if (jsonNode == null || jsonNode.asDouble() < 0.1) {
+            iterator.remove();
+          }
         }
       }
+      return child.process(record);
+      """
+    }
+  }
 ]

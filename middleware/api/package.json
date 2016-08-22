@@ -21,7 +21,7 @@
   "homepage": "https://github.com/ankittharwani/meetlytix#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "body-parser": "1.9",
+    "body-parser": "1.15.2",
     "async": "^1.5.2",
     "cassandra-driver": "3.1.1"
   }

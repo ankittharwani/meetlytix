@@ -10,11 +10,11 @@ client.connect(function(err, result) {
 
 var app = express();
 var getRSVPCount = "SELECT time, count FROM meetlytix.rsvp_count where time >= ? ALLOW FILTERING;";
-var getRSVPByGeo = "select * from meetlytix.rsvp_by_geo limit 3";
-var getEventCount = "select * from meetlytix.event_counts limit 3;";
-var getTopics = "select * from meetlytix.topics limit 3;";
-var getResponse = "select * from meetlytix.response_batch limit 3;";
-var getHistogram = "select * from meetlytix.histogram limit 5;";
+var getRSVPByGeo = "select * from meetlytix.rsvp_by_geo;";
+var getEventCount = "select * from meetlytix.event_counts;";
+var getTopics = "select * from meetlytix.topics;";
+var getResponse = "select * from meetlytix.response_batch;";
+var getHistogram = "select * from meetlytix.histogram;";
 
 app.use(bodyParser.json());
 app.set('json spaces', 2);
