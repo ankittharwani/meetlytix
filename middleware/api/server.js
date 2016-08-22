@@ -12,7 +12,7 @@ var app = express();
 var getRSVPCount = "SELECT time, count FROM meetlytix.rsvp_count where time >= ? ALLOW FILTERING;";
 var getRSVPByGeo = "select * from meetlytix.rsvp_by_geo;";
 var getEventCount = "select * from meetlytix.event_counts;";
-var getTopics = "select * from meetlytix.topics;";
+var getTopics = "select * from meetlytix.topics limit 100;";
 var getResponse = "select * from meetlytix.response_batch;";
 var getHistogram = "select * from meetlytix.histogram;";
 

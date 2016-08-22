@@ -208,3 +208,234 @@ SCRIPTENTRY: setup_host.sh
 [Mon 22 Aug 2016 13:16:45 BST] [INFO]	Last DSE host deployed: 
 [Mon 22 Aug 2016 13:16:45 BST] [INFO]	New host created would be: datastax-01
 [Mon 22 Aug 2016 13:16:45 BST] [INFO]	Requesting new host...
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 13:32:23 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 13:32:23 BST] [INFO]	Requesting new host...
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 13:33:31 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 13:33:31 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 13:33:31 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 13:33:32 BST] [INFO]	New host IP: 
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 13:33:53 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 13:33:53 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 13:33:53 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 13:33:54 BST] [INFO]	New host IP: 
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 13:34:07 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 13:34:07 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 13:34:07 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 13:34:08 BST] [INFO]	New host IP: 
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 13:34:24 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 13:34:24 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 13:34:24 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 13:34:26 BST] [INFO]	New host IP: 
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 13:34:50 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 13:34:51 BST] [INFO]	Last DSE host deployed: datastax-01
+[Mon 22 Aug 2016 13:34:51 BST] [INFO]	New host created would be: datastax-02
+[Mon 22 Aug 2016 13:34:51 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 13:34:51 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 13:34:53 BST] [INFO]	New host IP: 
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 13:35:48 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 13:35:49 BST] [INFO]	Last DSE host deployed: datastax-01
+[Mon 22 Aug 2016 13:35:49 BST] [INFO]	New host created would be: datastax-02
+[Mon 22 Aug 2016 13:35:49 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 13:35:49 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 13:35:50 BST] [INFO]	New host IP: datastax-01
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 13:35:52 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 13:35:53 BST] [INFO]	Last DSE host deployed: datastax-01
+[Mon 22 Aug 2016 13:35:53 BST] [INFO]	New host created would be: datastax-02
+[Mon 22 Aug 2016 13:35:53 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 13:35:53 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 13:35:54 BST] [INFO]	New host IP: datastax-01
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 13:36:37 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 13:36:38 BST] [INFO]	Last DSE host deployed: datastax-01
+[Mon 22 Aug 2016 13:36:38 BST] [INFO]	New host created would be: datastax-02
+[Mon 22 Aug 2016 13:36:38 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 13:36:38 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 13:36:40 BST] [INFO]	New host IP: 169.44.152.80
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 15:56:25 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 15:56:27 BST] [INFO]	Last DSE host deployed: datastax-01
+[Mon 22 Aug 2016 15:56:27 BST] [INFO]	New host created would be: datastax-02
+[Mon 22 Aug 2016 15:56:27 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 15:56:35 BST] [INFO]	Host is now ready: datastax-02
+[Mon 22 Aug 2016 15:56:35 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 15:56:36 BST] [INFO]	New host IP: 169.44.152.80
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 15:58:05 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 15:58:06 BST] [INFO]	Last DSE host deployed: datastax-01
+[Mon 22 Aug 2016 15:58:06 BST] [INFO]	New host created would be: datastax-02
+[Mon 22 Aug 2016 15:58:06 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 15:58:13 BST] [INFO]	Host is now ready: datastax-02
+[Mon 22 Aug 2016 15:58:13 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 15:58:14 BST] [INFO]	New host IP: 
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 16:05:22 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 16:05:24 BST] [INFO]	Last DSE host deployed: datastax-01
+[Mon 22 Aug 2016 16:05:24 BST] [INFO]	New host created would be: datastax-02
+[Mon 22 Aug 2016 16:05:24 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 16:05:30 BST] [INFO]	Host is now ready: datastax-02
+[Mon 22 Aug 2016 16:05:30 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 16:05:32 BST] [INFO]	New host IP: 
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 16:05:48 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 16:05:49 BST] [INFO]	Last DSE host deployed: datastax-01
+[Mon 22 Aug 2016 16:05:49 BST] [INFO]	New host created would be: datastax-02
+[Mon 22 Aug 2016 16:05:49 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 16:05:53 BST] [INFO]	Host is now ready: datastax-02
+[Mon 22 Aug 2016 16:05:53 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 16:05:54 BST] [INFO]	New host IP: 
+SCRIPTENTRY: setup_host.sh
+
+
+                     _   _       _   _
+ _ __ ___   ___  ___| |_| |_   _| |_(_)_  __
+| '_ ` _ \ / _ \/ _ \ __| | | | | __| \ \/ /
+| | | | | |  __/  __/ |_| | |_| | |_| |>  <
+|_| |_| |_|\___|\___|\__|_|\__, |\__|_/_/\_\
+                           |___/
+
+
+[Mon 22 Aug 2016 16:06:05 BST] [INFO]	Getting new host requirements...
+[Mon 22 Aug 2016 16:06:06 BST] [INFO]	Last DSE host deployed: datastax-01
+[Mon 22 Aug 2016 16:06:06 BST] [INFO]	New host created would be: datastax-02
+[Mon 22 Aug 2016 16:06:06 BST] [INFO]	Requesting new host...
+[Mon 22 Aug 2016 16:07:17 BST] [INFO]	Host is now ready: datastax-02
+[Mon 22 Aug 2016 16:07:17 BST] [INFO]	Getting new host details...
+[Mon 22 Aug 2016 16:07:18 BST] [INFO]	New host IP: datastax-02

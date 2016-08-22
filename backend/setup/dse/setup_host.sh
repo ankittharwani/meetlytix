@@ -6,18 +6,9 @@
 #version         : 0.1
 #==========================================================
 
-base_dir=/Users/ankittharwani/Work/MIDS/Term4/W251/Assignment/Project/meetlytix/backend
-log_file=dse_host_setup.log
-datacenter=$1
-ram=16384
-cpu=8
-os=REDHAT_LATEST_64
-domain=meetlytix.com
-disk=100
-network=1000
-key=ankitmacpersonal
+base_dir="/Users/ankittharwani/Work/MIDS/Term4/W251/Assignment/Project/meetlytix/backend"
+log_file="dse_host_setup.log"
 
-echo $datacenter
 # Init logger
 source $base_dir/common/logger.sh
 SCRIPTENTRY $base_dir/logs/$log_file
@@ -38,6 +29,24 @@ printf "%s\n" "$logo"
 PRINT "\n$logo"
 
 #==========================================================
+
+ram="16384"
+cpu="8"
+os="REDHAT_LATEST_64"
+domain="meetlytix.com"
+disk="100"
+network="1000"
+key="ankitmacpersonal"
+next_host=""
+new_host_ip=""
+
+meetlytix_dc_names=(meetlytix-dc-01 meetlytix-dc-02)
+meetlytix_dc_id=(c5c7c2d2-cc2b-4320-a715-b77ae4043e01 870bc447-8d44-40fe-a656-6f5bad71ee79)
+sl_dc_id=(sjc03 dal05)
+datacenter=$1
+
+#==========================================================
+
 get_host_details () {
   last_host=`slcli vs list | grep datastax | cut -d ' ' -f 3`
   INFO "Last DSE host deployed: "$last_host
@@ -60,13 +69,26 @@ request_new_host () {
   --datacenter $datacenter \
   --disk=$disk \
   --network $network \
-  --key $key \
-  --wait 60
+  --key $key
   slcli vs ready '$next_host' --wait=600
+  INFO "Host is now ready: "$next_host
+
 }
 
-INFO "Getting new host details..."
+get_new_host_details() {
+  new_host_ip=`slcli vs list | grep $next_host | cut -d ' ' -f 7`
+  #new_host_ip=`slcli vs list | grep $last_host | cut -d ' ' -f 7`
+  INFO "New host IP: "$new_host_ip
+  ssh -o "StrictHostKeyChecking no" root@$new_host_ip "yum -y install git"
+  scp ../../../../id* root@$new_host_ip:~/.ssh/
+  scp ../../../../authorized_keys root@$new_host_ip:~/.ssh/
+}
+
+INFO "Getting new host requirements..."
 get_host_details
 
 INFO "Requesting new host..."
 request_new_host
+
+INFO "Getting new host details..."
+get_new_host_details

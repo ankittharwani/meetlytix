@@ -44,7 +44,7 @@ install_jdk () {
   rpm -ivh $jdk_file
 
   alternatives --install /usr/bin/java java /usr/java/jdk1.8.0_$java_version/bin/java 200000
-  alternatives --config java
+  echo 1 | alternatives --config java
 
   echo "export JAVA_HOME=/usr/java/latest" >> ~/.bash_profile
   echo "export PATH=$JAVA_HOME/bin:$PATH" >> ~/.bash_profile
