@@ -15,6 +15,7 @@ var getEventCount = "select * from meetlytix.event_counts;";
 var getTopics = "select * from meetlytix.topics limit 100;";
 var getResponse = "select * from meetlytix.response_batch;";
 var getHistogram = "select * from meetlytix.histogram;";
+var getTotalRSVP = "select count(*) from meetlytix.meetlytix_raw_v3;";
 
 app.use(bodyParser.json());
 app.set('json spaces', 2);
@@ -245,6 +246,16 @@ app.get('/getHistogram', function(req, res) {
   client.execute(getHistogram, [], function(err, result) {
     if (err) {
       res.status(404).send({ "error" : 'Could not fetch histogram' });
+      //console.log(err);
+    } else {
+      res.json(result);        }
+    });
+  });
+
+app.get('/getTotalRSVP', function(req, res) {
+  client.execute(getTotalRSVP, [], function(err, result) {
+    if (err) {
+      res.status(404).send({ "error" : 'Could not fetch total count' });
       //console.log(err);
     } else {
       res.json(result);        }
