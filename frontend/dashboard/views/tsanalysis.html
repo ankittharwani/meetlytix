@@ -1,0 +1,152 @@
+<div class="row" ng-controller="DataboxesCtrl">
+  <div class="col-lg-12 col-sm-12 col-xs-12">
+    <div class="row" ng-show="true">
+      <div class="col-lg-6 col-sm-6 col-xs-12">
+        <div class="databox databox-xlg radius-bordered databox-shadowed">
+          <div class="databox-right bordered-thick bordered-whitesmoke bg-blue no-padding">
+            <div class="databox-stat bg-yellow radius-bordered">
+              <div class="stat-text">10 %</div>
+              <i class="stat-icon fa fa-long-arrow-up"></i>
+            </div>
+            <div class="databox-stat stat-left radius-bordered">
+              <div class="stat-text white">CPU USAGE</div>
+            </div>
+            <div databox-flot-chart-realtime class="chart chart-lg" id="chart1">
+            </div>
+          </div>
+          <div class="databox-left bg-snow">
+            <div class="databox-piechart">
+              <div class="easyPieChart" ui-jq="easyPieChart" ui-options="{ percent: 100, lineWidth: 7, barColor:'#11a9cc', trackColor: '#ffce55' , scaleColor:false, size: 150, lineCap: 'butt' }"><span class="sky font-150"><i class="fa fa-send"></i> {{RTRSVPTotal}}</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-6 col-xs-12">
+        <div class="databox databox-xlg radius-bordered databox-shadowed">
+          <div class="databox-left bg-snow">
+            <div class="databox-piechart">
+              <div class="easyPieChart" ui-jq="easyPieChart" ui-options="{ percent: 81, lineWidth: 7, barColor:'#11a9cc', trackColor: '#ffce55' , scaleColor:false, size: 150, lineCap: 'butt', animate: 500 }"><span class="sky font-150"><i class="fa fa-check-square-o"></i> RSVP={{BTRSVPPercentage}}% </span></div>
+            </div>
+          </div>
+          <div class="databox-right no-padding bordered-thick bordered-whitesmoke">
+            <div class="databox-row row-6 bg-orange padding-10">
+              <div style="height: 65px;" ui-jq="sparkline" ui-options="[2,6,7,9,8,5,3,4,4,3,6,7], {type:'line', height:65, width:'100%', fillColor:false, lineColor:'#fff', spotColor:'#fafafa', minSpotColor:'#fafafa', maxSpotColor:'#ffce55', highlightSpotColor:'#fff', highlightLineColor:'#fff', lineWidth:3, spotRadius:5 }"></div>
+            </div>
+            <div class="databox-row row-3 bg-yellow padding-10">
+              <span class="databox-title pull-left no-margin"><i class="fa fa-check"></i> Yes</span>
+              <span class="databox-number pull-right no-margin">{{ (BTRSVPResponse | filter:{response:'yes'})[0].count }}</span>
+            </div>
+            <div class="databox-row row-3 bg-sky padding-10">
+              <span class="databox-title pull-left"><i class="fa fa-close"></i> No</span>
+              <span class="databox-number pull-right no-margin">{{ (BTRSVPResponse | filter:{response:'no'})[0].count }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Vertical Databoxes -->
+    <div class="row" ng-show="true">
+      <div class="col-lg-6">
+        <div class="widget">
+          <div class="widget-header bordered-bottom bordered-themesecondary">
+            <i class="widget-icon fa fa-tags themesecondary"></i>
+            <span class="widget-caption themesecondary">Topic Board</span>
+          </div><!--Widget Header-->
+          <div class="widget-body  no-padding">
+            <div class="tickets-container">
+              <ul class="tickets-list">
+                <li class="ticket-item">
+                  <div class="row" ng-repeat="topic in BTTopicTop">
+                    <div class="ticket-time  col-lg-8 col-sm-8 col-xs-8">
+                      <div class="divider hidden-md hidden-sm hidden-xs"></div>
+                      <i class="fa fa-clock-o"></i>
+                      <span class="time">{{topic.group_topics}}</span>
+                    </div>
+                    <div class="ticket-type  col-lg-4 col-sm-4 col-xs-4">
+                      <span class="divider hidden-xs"></span>
+                      <span class="type">{{topic.count}}</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>
+</div>
+<script>
+$.getScript('//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.min.js',function(){
+  $.getScript('//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.pie.min.js',function(){
+    $.getScript('//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.resize.min.js',function(){
+
+      // real-time chart
+      // we use an inline data source in the example, usually data would
+      // be fetched from a server
+      var data = [], totalPoints = 100;
+      function getData() {
+        if (data.length > 0)
+        data = data.slice(1);
+
+        // do a random walk
+        while (data.length < totalPoints) {
+          var prev = data.length > 0 ? data[data.length - 1] : 50;
+          var y = prev + Math.random() * 10 - 5;
+          if (y < 0)
+          y = 0;
+          if (y > 100)
+          y = 100;
+          data.push(y);
+        }
+
+        // zip the generated y values with the x values
+        var res = [];
+        for (var i = 0; i < data.length; ++i)
+        res.push([i, data[i]])
+        return res;
+      }
+
+      // setup control widget
+      var updateInterval = 500;
+      $("#updateInterval").val(updateInterval).change(function () {
+        var v = $(this).val();
+        if (v && !isNaN(+v)) {
+          updateInterval = +v;
+          if (updateInterval < 1)
+          updateInterval = 1;
+          if (updateInterval > 2000)
+          updateInterval = 2000;
+          $(this).val("" + updateInterval);
+        }
+      });
+
+      // setup plots
+      var options = {
+        grid:{show:false},
+        series:{shadowSize:0,color:"#ffffff"},
+        yaxis:{min:0,max:100},
+        xaxis:{show:true}
+      };
+
+      var plot = $.plot($("#chart1"), [ getData() ], options);
+
+      function update() {
+        plot.setData([ getData() ]);
+        plot.draw();
+        setTimeout(update, updateInterval);
+      }
+
+      update();
+
+    });// end getScript (resize)
+  });// end getScript (pie)
+});// end getScript
+</script>
