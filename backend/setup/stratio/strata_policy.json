@@ -78,7 +78,7 @@
         },
         {
           "name":"group_topics",
-          "type":"arraystring"
+          "type":"string"
         },
         {
           "name":"group_city",
